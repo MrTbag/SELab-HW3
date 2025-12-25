@@ -85,4 +85,34 @@ public class ShoppingCartTest {
         assertEquals(30.0, cart.getTotal());
     }
 
+    // Coverage improvement - removing a missing item should return false and not change cart
+    @Test
+    public void testRemoveMissingItem() {
+        ShoppingCart cart = new ShoppingCart();
+        cart.addItem("Pen", 10);
+
+        assertFalse(cart.removeItem("Pencil"));
+        assertEquals(1, cart.getItemCount());
+        assertEquals(10.0, cart.getTotal());
+    }
+
+    // Coverage improvement - empty cart totals
+    @Test
+    public void testEmptyCartTotals() {
+        ShoppingCart cart = new ShoppingCart();
+        assertEquals(0, cart.getItemCount());
+        assertEquals(0.0, cart.getTotal());
+        assertEquals(0.0, cart.getTotalWithDiscount());
+    }
+
+    // Coverage improvement - discount should apply when total is just above 100
+    @Test
+    public void testDiscountJustAbove100() {
+        ShoppingCart cart = new ShoppingCart();
+        cart.addItem("A", 100.01);
+
+        assertEquals(100.01 * 0.9, cart.getTotalWithDiscount(), 1e-9);
+    }
+
+
 }
