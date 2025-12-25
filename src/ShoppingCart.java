@@ -36,6 +36,11 @@ public class ShoppingCart {
         return items.size();
     }
 
-    public void updateItemPrice(String name, int newPrice) {}
+    public void updateItemPrice(String name, int newPrice) {
+        if (items.containsKey(name)) {
+            items.put(name, (double) newPrice);
+        }
+    }
+
 
 }
