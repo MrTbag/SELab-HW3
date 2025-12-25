@@ -37,10 +37,9 @@ public class ShoppingCart {
     }
 
     public void updateItemPrice(String name, int newPrice) {
-        if (items.containsKey(name)) {
-            items.put(name, (double) newPrice);
-        }
+        items.computeIfPresent(name, (k, v) -> (double) newPrice);
     }
+
 
 
 }
