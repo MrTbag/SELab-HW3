@@ -34,7 +34,8 @@
 - پروژه در وضعیت پایدار اولیه قرار داشت
 
 **اسکرین‌شات اجرای اولیه تست‌ها:**
-![baseline-tests](initial test.png)
+![baseline-tests](initial%20test.png)
+
 
 ---
 
@@ -64,7 +65,7 @@ if (total >= 100)
 این تست در وضعیت اولیه پروژه **Fail** شد و وجود باگ را آشکار کرد.
 
 **اسکرین‌شات تست Fail (RED):**
-![discount-boundary-red](add failing test.png)
+![discount-boundary-red](add%20failing%20test.png)
 
 ---
 
@@ -78,7 +79,7 @@ if (total > 100)
 پس از این تغییر، تست جدید و سایر تست‌ها با موفقیت **Pass** شدند.
 
 **اسکرین‌شات تست Pass (GREEN):**
-![discount-boundary-green](correct the discount condition.png)
+![discount-boundary-green](correct%20the%20discount%20condition.png)
 
 ---
 
@@ -103,11 +104,11 @@ if (total > 100)
 
 **اسکرین‌شات مراحل TDD (RED / GREEN):**
 Failed
-![update-red](test enableItemPrice failed.png)
+![update-red](test%20enableItemPrice%20failed.png)
 Passed
-![update-green](test enableItemPrice passed.png)
+![update-green](test%20enableItemPrice%20passed.png)
 Refactored
-![update-green](test enableItemPrice passed after refactoring.png)
+![update-green](test%20enableItemPrice%20passed%20after%20refactoring.png)
 ---
 
 ### رفتار نهایی متد updateItemPrice
@@ -126,7 +127,7 @@ Refactored
 - Branch Coverage: **83% (5 از 6 شاخه)**
 
 **اسکرین‌شات Coverage قبل از تغییرات:**
-![coverage-before](initial coverage.png)
+![coverage-before](initial%20coverage.png)
 
 ---
 
@@ -137,7 +138,7 @@ Refactored
 - Branch Coverage: **100% (6 از 6 شاخه)**
 
 **اسکرین‌شات Coverage بعد از تغییرات:**
-![coverage-after](final coverage.png)
+![coverage-after](final%20coverage.png)
 
 ---
 
