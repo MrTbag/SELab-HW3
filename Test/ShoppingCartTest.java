@@ -44,6 +44,17 @@ public class ShoppingCartTest {
         assertEquals(108.0, discounted);
     }
 
+    @Test
+    public void testNoDiscountAtExactly100() {
+        ShoppingCart cart = new ShoppingCart();
+        cart.addItem("A", 40);
+        cart.addItem("B", 60);
+
+        double discounted = cart.getTotalWithDiscount();
+
+        assertEquals(100.0, discounted);
+    }
+
 //    @Test
 //    public void testUpdateItemPrice_ShouldChangePrice() {
 //        ShoppingCart cart = new ShoppingCart();
